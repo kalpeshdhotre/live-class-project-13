@@ -22,8 +22,10 @@
     padding: 3em;
     border-radius: 25px 25px 0px 0px ;
     /* height: 150px; */
-    /* margin: auto; */
-    
+    /* margin: auto; */    
+}
+.menu-icon{
+    display: none;
 }
 
 .menu-items{
@@ -51,6 +53,7 @@
     color: #ffff;
     width: 180px;
     height: 50px;
+    border: none;
     /* left: 40%; */
 }
 
@@ -266,8 +269,18 @@
     
     /* Start of navigation bar */
     .header{
-        grid-template-rows: 1fr;
-        padding: 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2em;
+        /* grid-template-rows: 1fr 1fr 1fr;
+        padding: 1.5em; */
+    }
+
+    .menu-icon{
+        display: contents;
+        color: #ffff;
+        font-size: 2em;
     }
     .company-logo{
         width: 25vw;
