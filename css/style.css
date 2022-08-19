@@ -2,11 +2,13 @@
 
 *{
     margin: 0;
-    border: 0;    
+    /* border: solid 1px ;     */
 }
 
 .container{
-    width: 1600px;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
     margin: auto;
     box-shadow: 0px 10px 14px -7px #505050;
     font-family: 'Poppins', sans-serif;
@@ -15,27 +17,32 @@
 /* <!-- START Header Section --> */
 .header{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr 3fr 1fr;
     background-color: #7030cc;
-    padding-left: 50px;
-    padding-top: 30px;
-    padding-right: 50px;
+    padding: 3em;
     border-radius: 25px 25px 0px 0px ;
-    height: 150px;
-    margin: auto;
+    /* height: 150px; */
+    /* margin: auto; */
     
 }
 
 .menu-items{
-    display: flex;
     /* grid-template-columns: repeat(5,1fr); */
-    list-style: none;
     /* border: red solid; */
-    height: 50px;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    height: 3em;
     align-items: center;
+    column-gap: 2.5em;
     color: #ffff;
     justify-content: space-evenly;
-    width: 700px;
+    max-width: 700px;
+    padding-right: 3em;
+}
+
+.menu{
+    justify-self: right;
 }
 
 .free-trial{
@@ -44,7 +51,7 @@
     color: #ffff;
     width: 180px;
     height: 50px;
-    left: 40%;
+    /* left: 40%; */
 }
 
 .menu-item:hover{
@@ -56,67 +63,95 @@
 
 /* <!-- Start of Main Hero Part 1 --> */
 .hero-section-1{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    /* grid-template-columns: 1fr 1fr; */
     /* border: solid; */
     background-color: #7030cc;
     color: #ffff;
-    height: 700px;
+    height: 45em;
 }
 
-.hero-image-1{
-    width: 750px;
+/* .hero-image-1{
+    width: 45em;
+} */
+
+.hero-section-1-image{
+    width: 100%;
+    height: auto;    
+}
+.left-text{
+    display: flex;
+    flex-direction: column;    
+    padding-left: 5em;
+    padding-top: 5em;
 }
 
 .section1-head-text{
-    /* border: red solid; */
-    font-size: 50px;
+    font-size: 3em;
     font-weight: 600;
-    margin-left: 25%;
-    margin-top: 50px;
-    width: 450px;
+    /* padding-left: 3em; */
+    padding-top: 2em;
 }
 
 .head-desc{
-    font-size: 20px;
+    font-size: 1em;
+    padding-top: 5em;
     font-weight: 200;
-    margin-left: 200px;
-    margin-top: 50px;
-    width: 550px;
+    height: 3em; 
 }
+
 /* <!-- END of Main Hero Part 1 --> */
 
 /* <!-- START of main hero PART 2 --> */
 .hero-section-2{
-    margin-top: 70px;
+    /* display: grid; */
+    /* flex-direction: row;   */
+    /* justify-content: center; */
+    /* margin: auto;   */
+    margin-top: 3em;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* border: solid; */
+    padding: 3em;
 }
 
-.hero-section-2-image{
-    width: 600px;
-    margin-left: 50px;
+.feature{
+    display: flex;
 }
-.right-text{
+.hero-section-2-image{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    max-width: 40vw;
+    /* margin-left: 3em; */
+}
+.features{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+}
+.head-text{
+    margin-bottom: 2em;
+}
+/* .right-text{
     position: relative;
-    /* border: red solid; */
+    border: red solid;
     width: 600px;
     left: 100px;
 }
 
 .hero-section-2>.right-text>.head-text{
     position: relative;
-    /* border: solid; */
+    border: solid;
     width: 500px;
     font-size: 40px;
-    /* left: -3%; */
-    /* left: -250px; */  
+    left: -3%;
+    left: -250px;  
 }
 
 .features{
     display: grid;
-    /* border: solid; */
+    border: solid;
 }
 
 .feature h2{
@@ -137,35 +172,41 @@
     position: relative;
     top: 50px;
     left: -20;
-}
+} */
 
 /* <!-- END of main hero part 2 --> */
 
 /* <!-- START footer section --> */
 
+.footer-features{
+    display: flex;
+    flex-direction: column;
+}
 .footer-heading{
     text-align: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .footer-feature-cards{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 10px;
-    height: 400px;
-    margin: auto;
-    justify-items: center;
-    width: 1000px;
-    
+    /* display: grid;
+    grid-template-columns: repeat(4,1fr); */
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    height: 25em;
+    /* margin: auto; */
+    /* justify-items: center; */
+    justify-content: center;
+    /* width: 10em;     */
 }
 
 .footer-feature-card{
     /* border: solid; */
     display: grid;
-    width: 200px;
-    height: 250px;
-    border-radius: 25px;
+    width: 10em;
+    height: 16em;
+    border-radius: 2em;
     box-shadow: 10px 10px 14px -10px #505050;
     justify-items: center;
 }
@@ -177,8 +218,8 @@
 .icon-container{
     display: grid;
     background-color: #faeaeb;
-    width: 100px;
-    height: 100px;    
+    width: 6em;
+    height: 6em;    
     justify-items: center;
     align-items: center;
     border-radius: 50%;
@@ -210,11 +251,93 @@
     color: #ffff;
 }
 
-
-
 /* <!-- END of footer section --> */
 
 .company-logo:hover{
     /* border: solid; */
     fill: #DA4567;
+
+}
+
+/* ========================================================= */
+
+/* Media Query */
+@media(max-width:768px){
+    
+    /* Start of navigation bar */
+    .header{
+        grid-template-rows: 1fr;
+        padding: 1.5em;
+    }
+    .company-logo{
+        width: 25vw;
+    }
+    .menu-items{
+        display: none;
+    }
+
+    .free-trial{
+        width: 25vw;
+        height: 8vw;
+        font-size: 2.5vw;
+    }
+
+    /* <!-- Start of Main Hero Part 1 --> */
+    .hero-section-1{
+        display: flex;
+        flex-direction: column;
+        height: auto;        
+    }
+    .hero-section-1-image{
+        width: 80%;
+        height: auto;
+        align-self: center; 
+    }
+    .left-text{
+        display: flex;
+        flex-direction: column;    
+        padding-left: 0;
+        padding-top: 0;
+        text-align: center;
+    }
+    
+    .section1-head-text{
+        font-size: 7vw;
+        font-weight: 600;
+        /* padding-left: 3em; */
+        padding-top: 1em;
+    }
+    .head-desc{
+        font-size: 1em;
+        padding-top: 1em;
+        font-weight: 200;
+        /* height: 3em;  */
+        margin-bottom: 4em;
+    }
+    
+    /* Start of main Hero section 2 */
+    .feature{
+        flex-direction: column;
+    }
+    .hero-section-2{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .hero-section-2-image{
+        width: 85vw;
+        height: auto;
+        margin-bottom: 2em;
+
+    }
+
+    .footer-feature-cards{
+        flex-direction: column;
+        height: auto;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+
 }
